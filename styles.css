@@ -329,6 +329,8 @@ a {
   border-radius: 1.5rem;
   padding: 2rem;
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+  max-width: 750px;
+  margin: 0 auto;
 }
 
 .reserve-hero {
@@ -337,6 +339,7 @@ a {
 }
 
 .form-block {
+  background: rgba(12, 159, 143, 0.05);
   border: 1px solid rgba(13, 79, 109, 0.12);
   border-radius: 1.25rem;
   padding: 1.8rem;
@@ -349,6 +352,17 @@ a {
   font-weight: 700;
   padding: 0 0.5rem;
   color: var(--color-principal);
+}
+
+.fieldset-group {
+  border: 1px solid rgba(13, 79, 109, 0.12);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.fieldset-group legend {
+  margin-bottom: 0.75rem;
 }
 
 .form-grid {
@@ -373,6 +387,11 @@ a {
   color: var(--color-principal);
 }
 
+.required {
+  color: var(--color-secundario);
+  margin-left: 0.25rem;
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -387,8 +406,19 @@ a {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  outline: 2px solid rgba(244, 173, 54, 0.45);
-  outline-offset: 2px;
+  outline: none;
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 0 4px rgba(244, 173, 54, 0.18);
+}
+
+.campo-error {
+  border-color: #e53935 !important;
+  box-shadow: 0 0 0 4px rgba(229, 57, 53, 0.15);
+}
+
+.campo-ok {
+  border-color: #2e7d32 !important;
+  box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.15);
 }
 
 .radio-group,

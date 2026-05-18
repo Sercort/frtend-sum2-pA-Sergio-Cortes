@@ -88,3 +88,104 @@ si modifique algunos codigos, telefonos fue muy pocas cosas ya que lo que le ped
 REFLEXION PERSONAL:
 
 si cumplio con lo que le pédi 
+
+
+ CONSULTA 
+#[2] Etapa del proyecto: [Etapa 1 ] Fecha: 
+[18/05/20226] ------------------------------------------------------------
+
+parte 1 
+
+PROMPT ENVIADO A COPILOT: [crea un formulario de solicitud de reserva(html-css)
+
+el objetivo es que la pagina reserva.html con un formulario completo para solicitar un paquete turistico. El 
+formulario debe recopilar informacion detallada del viaje y de los pasajeros, estar bien estructurado 
+con semantica HTML5 y presentar un diseno atractivo y adaptable a distintos tamanos de pantalla.
+
+Contenido del Formulario
+El formulario debe estar dividido en cuatro secciones claramente diferenciadas de forma visual, con 
+titulos de seccion que indiquen al usuario donde se encuentra.
+Seccion A — Datos del Viaje
+- Destino de interes (select con minimo doce destinos agrupados por region: America del Sur, 
+Europa, Asia, Caribe, Otros).
+- Tipo de paquete (radio buttons: Todo incluido, Solo aereo mas hotel, Crucero, Viaje de 
+egresados, A medida).
+- Fecha de salida deseada (input date, requerido).
+- Fecha de regreso deseada (input date, requerido).
+- Duracion aproximada (select: 3 a 5 dias, 1 semana, 2 semanas, mas de 2 semanas).
+- Flexibilidad de fechas (checkbox: "Mis fechas son flexibles mas o menos 3 dias").
+- Puerto de salida preferido (select: Buenos Aires, Cordoba, Rosario, Otro). Si el usuario 
+selecciona "Otro", debe aparecer un campo de texto adicional para especificar la ciudad.
+Seccion B — Datos de los Pasajeros
+- Cantidad de adultos (input number, minimo 1, maximo 10).
+- Cantidad de menores (input number, minimo 0, maximo 8).
+- Viaja con adultos mayores (checkbox, con campo numerico condicional para indicar la 
+cantidad).
+- Datos del pasajero principal:
+f) Nombre completo (input text, requerido).
+g) Numero de pasaporte o DNI (input text, requerido).
+h) Fecha de nacimiento (input date, requerido).
+i) Nacionalidad (select, requerido).
+j) Correo electronico (input email, requerido).
+k) Telefono de contacto (input tel, requerido).
+- Necesidades especiales (checkbox). Si esta marcado, mostrar un textarea para que el 
+pasajero las detalle.
+Seccion C — Preferencias y Servicios Adicionales
+- Tipo de habitacion preferida (radio buttons: Simple, Doble, Triple, Suite).
+- Regimen de comidas (select: Solo alojamiento, Desayuno incluido, Media pension, Pension 
+completa, Todo incluido).
+- Servicios adicionales (checkboxes multiples): Seguro de viaje, Traslado aeropuerto, 
+Excursiones incluidas, Guia en espanol, Visa incluida.
+- Presupuesto estimado por persona (select: Menos de USD 500, USD 500 a 1000, USD 
+1000 a 2500, USD 2500 a 5000, Sin limite definido).
+- Como se entero de ViajarYa (select: Redes sociales, Recomendacion, Busqueda web, 
+Publicidad, Ya soy cliente).
+Seccion D — Comentarios y Confirmacion
+- Campo de comentarios o pedidos especiales (textarea, maximo 300 caracteres, con 
+contador de caracteres visible).
+- Desea recibir ofertas por correo electronico (checkbox).
+- Acepto los Terminos y Condiciones (checkbox obligatorio, con enlace a pagina ficticia).
+- Acepto la Politica de Privacidad y el tratamiento de datos personales (checkbox obligatorio).
+Botones de Accion
+- Boton principal "Solicitar Reserva" (submit), centrado y con estilo destacado.
+- Boton secundario "Limpiar" (reset).
+- Enlace "Volver al inicio" que redirija a index.html.
+
+parte 2 
+
+crea los requisitos de  Estilo y Accesibilidad
+- Los campos deben cambiar visualmente al recibir el foco (propiedad :focus): borde con 
+color y sombra suave.
+- Preparar las clases CSS "campo-error" (borde rojo) y "campo-ok" (borde verde) para ser 
+aplicadas en la Etapa 3.
+- Las cuatro secciones del formulario deben estar visualmente separadas mediante fondo 
+diferente, borde redondeado o linea divisoria con titulo.
+- El formulario debe estar centrado con un ancho maximo de 750 pixeles.
+Diseno responsivo: en pantallas de escritorio algunos campos pueden mostrarse en dos 
+columnas; en dispositivos moviles todos los campos ocupan el ancho completo.
+- Todos los campos deben tener su etiqueta <label> asociada correctamente mediante los 
+atributos for e id. Los campos requeridos deben estar marcados con asterisco en la 
+etiqueta.
+- Los grupos de radio buttons y checkboxes deben estar contenidos dentro de un elemento 
+<fieldset> con su correspondiente <legend>
+ y deja los botones de selección alineado a las palabras que queden en una sola linea 
+] 
+------------------------------------------------------------
+RESPUESTA RECIBIDA (resumen breve): [reserve-form ahora está centrado y con max-width: 750px
+Campos tienen efecto visual en :focus con borde coloreado y sombra suave
+Se agregaron las clases CSS listas para Etapa 3:
+.campo-error
+.campo-ok
+Las 4 secciones del formulario están visualmente separadas con:
+fondos ligeros
+bordes redondeados
+títulos legend
+Los grupos de radio buttons y checkboxes se movieron dentro de fieldset + legend
+Todos los campos usan label con for + id
+Los campos requeridos ahora muestran asterisco en su etiqueta] 
+----------------------------------------------------------
+-- USO EN EL PROYECTO: [ cambie lo minimo ya que tenia un valor superior a lo requerido ] ------------------------------------------------------
+------ REFLEXION PERSONAL: [Escribir con tus propias palabras: fue util el 
+prompt? Obtuviste lo que esperabas? Que cambiarias la proxima vez?
+
+si fue util ya que esta generando los codigos como esta en el prompt ] 
