@@ -319,6 +319,123 @@ a {
   gap: 0.5rem;
 }
 
+.form-section {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.reserve-form {
+  background: var(--color-blanco);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+.reserve-hero {
+  min-height: 40vh;
+  background-image: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80');
+}
+
+.form-block {
+  border: 1px solid rgba(13, 79, 109, 0.12);
+  border-radius: 1.25rem;
+  padding: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.form-block legend {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0 0.5rem;
+  color: var(--color-principal);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label,
+.option-label {
+  font-weight: 600;
+  color: var(--color-principal);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  border-radius: 0.9rem;
+  padding: 0.95rem 1rem;
+  font-size: 0.98rem;
+  font-family: inherit;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 2px solid rgba(244, 173, 54, 0.45);
+  outline-offset: 2px;
+}
+
+.radio-group,
+.checkbox-group {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  font-weight: 500;
+  color: #334155;
+}
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.5rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-principal);
+  border: 1px solid rgba(13, 79, 109, 0.18);
+  font-weight: 700;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.char-counter {
+  font-size: 0.95rem;
+  color: #475569;
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
 .copyright {
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
@@ -331,11 +448,13 @@ a {
   .services-grid,
   .testimonials-grid,
   .why-grid,
-  .footer-grid {
+  .footer-grid,
+  .form-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .hero-search {
+  .hero-search,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 }

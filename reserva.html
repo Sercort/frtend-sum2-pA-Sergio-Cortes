@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservar - ViajarYa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">ViajarYa</a>
+      <nav class="nav">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#destinos">Destinos</a>
+        <a href="index.html#paquetes">Paquetes</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html" class="btn-link">Volver</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero reserve-hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="hero-tag">Planifica tu próxima experiencia turística</p>
+        <h1>Solicitud de Reserva</h1>
+        <p class="hero-text">Completa el formulario y uno de nuestros asesores te contactará para ayudarte a cerrar tu viaje ideal.</p>
+      </div>
+    </section>
+
+    <section class="section form-section">
+      <div class="container">
+        <div class="section-header">
+          <span>Formulario de reserva</span>
+          <h2>Solicita tu paquete turístico con ViajarYa</h2>
+        </div>
+
+        <form class="reserve-form" action="#" method="post">
+          <fieldset class="form-block">
+            <legend>Sección A — Datos del viaje</legend>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="destino">Destino de interés</label>
+                <select id="destino" name="destino" required>
+                  <optgroup label="América del Sur">
+                    <option value="rio-de-janeiro">Río de Janeiro</option>
+                    <option value="cusco">Cusco</option>
+                    <option value="patagonia">Patagonia</option>
+                  </optgroup>
+                  <optgroup label="Europa">
+                    <option value="paris">París</option>
+                    <option value="roma">Roma</option>
+                    <option value="barcelona">Barcelona</option>
+                  </optgroup>
+                  <optgroup label="Asia">
+                    <option value="tokio">Tokio</option>
+                    <option value="bangkok">Bangkok</option>
+                    <option value="dubai">Dubái</option>
+                  </optgroup>
+                  <optgroup label="Caribe">
+                    <option value="riviera-maya">Riviera Maya</option>
+                    <option value="punta-cana">Punta Cana</option>
+                  </optgroup>
+                  <optgroup label="Otros">
+                    <option value="sydney">Sídney</option>
+                    <option value="cabo-verde">Cabo Verde</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <p class="option-label">Tipo de paquete</p>
+                <div class="radio-group">
+                  <label><input type="radio" name="paquete" value="todo-incluido" checked> Todo incluido</label>
+                  <label><input type="radio" name="paquete" value="aereo-hotel"> Solo aéreo + hotel</label>
+                  <label><input type="radio" name="paquete" value="crucero"> Crucero</label>
+                  <label><input type="radio" name="paquete" value="egresados"> Viaje de egresados</label>
+                  <label><input type="radio" name="paquete" value="a-medida"> A medida</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="fecha-salida">Fecha de salida</label>
+                <input type="date" id="fecha-salida" name="fecha_salida" required>
+              </div>
+
+              <div class="form-group">
+                <label for="fecha-regreso">Fecha de regreso</label>
+                <input type="date" id="fecha-regreso" name="fecha_regreso" required>
+              </div>
+
+              <div class="form-group">
+                <label for="duracion">Duración aproximada</label>
+                <select id="duracion" name="duracion">
+                  <option value="3-5">3 a 5 días</option>
+                  <option value="1-semana">1 semana</option>
+                  <option value="2-semanas">2 semanas</option>
+                  <option value="mas-2-semanas">Más de 2 semanas</option>
+                </select>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label><input type="checkbox" name="flexible"> Mis fechas son flexibles más o menos 3 días</label>
+              </div>
+
+              <div class="form-group">
+                <label for="puerto">Puerto de salida preferido</label>
+                <select id="puerto" name="puerto" required>
+                  <option value="buenos-aires">Buenos Aires</option>
+                  <option value="cordoba">Córdoba</option>
+                  <option value="rosario">Rosario</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-group hidden" id="puerto-otro-group">
+                <label for="puerto-otro">Especificar ciudad</label>
+                <input type="text" id="puerto-otro" name="puerto_otro" placeholder="Ciudad de salida">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-block">
+            <legend>Sección B — Datos de los pasajeros</legend>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="adultos">Cantidad de adultos</label>
+                <input type="number" id="adultos" name="adultos" min="1" max="10" value="1" required>
+              </div>
+
+              <div class="form-group">
+                <label for="menores">Cantidad de menores</label>
+                <input type="number" id="menores" name="menores" min="0" max="8" value="0">
+              </div>
+
+              <div class="form-group checkbox-group full-width">
+                <label><input type="checkbox" id="mayores-checkbox" name="viaja_mayores"> Viaja con adultos mayores</label>
+              </div>
+
+              <div class="form-group hidden" id="mayores-cantidad-group">
+                <label for="mayores-cantidad">Cantidad de adultos mayores</label>
+                <input type="number" id="mayores-cantidad" name="mayores_cantidad" min="1" max="5" value="1">
+              </div>
+
+              <div class="form-group full-width">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+              </div>
+
+              <div class="form-group">
+                <label for="documento">Pasaporte o DNI</label>
+                <input type="text" id="documento" name="documento" required>
+              </div>
+
+              <div class="form-group">
+                <label for="nacimiento">Fecha de nacimiento</label>
+                <input type="date" id="nacimiento" name="nacimiento" required>
+              </div>
+
+              <div class="form-group">
+                <label for="nacionalidad">Nacionalidad</label>
+                <select id="nacionalidad" name="nacionalidad" required>
+                  <option value="argentina">Argentina</option>
+                  <option value="chilena">Chilena</option>
+                  <option value="brasilena">Brasilera</option>
+                  <option value="colombiana">Colombiana</option>
+                  <option value="mexicana">Mexicana</option>
+                  <option value="espana">España</option>
+                  <option value="francia">Francia</option>
+                  <option value="usa">Estados Unidos</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono de contacto</label>
+                <input type="tel" id="telefono" name="telefono" required>
+              </div>
+
+              <div class="form-group checkbox-group full-width">
+                <label><input type="checkbox" id="especiales-checkbox" name="necesidades_especiales"> Necesidades especiales</label>
+              </div>
+
+              <div class="form-group hidden full-width" id="especiales-group">
+                <label for="especiales-texto">Detalle de necesidades especiales</label>
+                <textarea id="especiales-texto" name="especiales_texto" rows="4" placeholder="Describe aquí cualquier necesidad específica"></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-block">
+            <legend>Sección C — Preferencias y servicios adicionales</legend>
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <p class="option-label">Tipo de habitación preferida</p>
+                <div class="radio-group">
+                  <label><input type="radio" name="habitacion" value="simple" checked> Simple</label>
+                  <label><input type="radio" name="habitacion" value="doble"> Doble</label>
+                  <label><input type="radio" name="habitacion" value="triple"> Triple</label>
+                  <label><input type="radio" name="habitacion" value="suite"> Suite</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="regimen">Régimen de comidas</label>
+                <select id="regimen" name="regimen">
+                  <option value="alojamiento">Solo alojamiento</option>
+                  <option value="desayuno">Desayuno incluido</option>
+                  <option value="media-pension">Media pensión</option>
+                  <option value="pension-completa">Pensión completa</option>
+                  <option value="todo-incluido">Todo incluido</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <p class="option-label">Servicios adicionales</p>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="servicios[]" value="seguro"> Seguro de viaje</label>
+                  <label><input type="checkbox" name="servicios[]" value="traslado"> Traslado aeropuerto</label>
+                  <label><input type="checkbox" name="servicios[]" value="excursiones"> Excursiones incluidas</label>
+                  <label><input type="checkbox" name="servicios[]" value="guia"> Guía en español</label>
+                  <label><input type="checkbox" name="servicios[]" value="visa"> Visa incluida</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="presupuesto">Presupuesto estimado por persona</label>
+                <select id="presupuesto" name="presupuesto">
+                  <option value="menos-500">Menos de USD 500</option>
+                  <option value="500-1000">USD 500 a 1000</option>
+                  <option value="1000-2500">USD 1000 a 2500</option>
+                  <option value="2500-5000">USD 2500 a 5000</option>
+                  <option value="sin-limite">Sin límite definido</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="origen">Cómo se enteró de ViajarYa</label>
+                <select id="origen" name="origen">
+                  <option value="redes">Redes sociales</option>
+                  <option value="recomendacion">Recomendación</option>
+                  <option value="busqueda">Búsqueda web</option>
+                  <option value="publicidad">Publicidad</option>
+                  <option value="cliente">Ya soy cliente</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-block">
+            <legend>Sección D — Comentarios y confirmación</legend>
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label for="comentarios">Comentarios o pedidos especiales</label>
+                <textarea id="comentarios" name="comentarios" rows="5" maxlength="300" placeholder="Escribe hasta 300 caracteres"></textarea>
+                <div class="char-counter"><span id="counter">300</span> caracteres restantes</div>
+              </div>
+
+              <div class="form-group checkbox-group full-width">
+                <label><input type="checkbox" name="ofertas" checked> Deseo recibir ofertas por correo electrónico</label>
+              </div>
+
+              <div class="form-group checkbox-group full-width">
+                <label><input type="checkbox" name="terminos" required> Acepto los <a href="#">Términos y Condiciones</a></label>
+              </div>
+
+              <div class="form-group checkbox-group full-width">
+                <label><input type="checkbox" name="privacidad" required> Acepto la <a href="#">Política de Privacidad</a> y el tratamiento de datos personales</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Solicitar Reserva</button>
+            <button type="reset" class="btn-secondary">Limpiar</button>
+            <a href="index.html" class="link-button">Volver al inicio</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand footer-brand">ViajarYa</a>
+        <p>Tu puente hacia las mejores experiencias de viaje.</p>
+      </div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#destinos">Destinos</a>
+        <a href="index.html#paquetes">Paquetes</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>Email: contacto@viajarYa.com</p>
+        <p>Tel: +54 11 1234 5678</p>
+        <p>WhatsApp: +54 9 11 9876 5432</p>
+      </div>
+      <div>
+        <h4>Síguenos</h4>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2026 ViajarYa. Todos los derechos reservados.</div>
+  </footer>
+
+  <script>
+    const puertoSelect = document.getElementById('puerto');
+    const puertoOtroGroup = document.getElementById('puerto-otro-group');
+    const mayoresCheckbox = document.getElementById('mayores-checkbox');
+    const mayoresCantidadGroup = document.getElementById('mayores-cantidad-group');
+    const especialesCheckbox = document.getElementById('especiales-checkbox');
+    const especialesGroup = document.getElementById('especiales-group');
+    const comentarios = document.getElementById('comentarios');
+    const counter = document.getElementById('counter');
+
+    function updateVisibility() {
+      puertoOtroGroup.classList.toggle('hidden', puertoSelect.value !== 'otro');
+      mayoresCantidadGroup.classList.toggle('hidden', !mayoresCheckbox.checked);
+      especialesGroup.classList.toggle('hidden', !especialesCheckbox.checked);
+    }
+
+    function updateCounter() {
+      const remaining = 300 - comentarios.value.length;
+      counter.textContent = remaining;
+    }
+
+    puertoSelect.addEventListener('change', updateVisibility);
+    mayoresCheckbox.addEventListener('change', updateVisibility);
+    especialesCheckbox.addEventListener('change', updateVisibility);
+    comentarios.addEventListener('input', updateCounter);
+
+    updateVisibility();
+    updateCounter();
+  </script>
+</body>
+</html>
