@@ -1,0 +1,90 @@
+etapa 1 
+
+PROMPT ENVIADO A COPILOT: 
+
+genera un código HTML y css:
+desarrollara el sitio web de "ViajarYa""ViajarYa" es una agencia 
+de turismo ficticia especializada en paquetes de viaje nacionales e internacionales, cruceros, viajes 
+de egresados y turismo de aventura.
+ 
+el negocio:
+ el sitio web debe transmitir confianza y facilitar que los visitantes descubran destinos, conozcan los 
+servicios disponibles y puedan solicitar una reserva de forma sencilla.
+ objetivo de la pagina:
+Construir la pagina principal (home) del sitio de ViajarYa. El sitio debe comunicar los servicios de la 
+agencia, inspirar al visitante a explorar destinos y guiarlo hacia el formulario de reserva.
+Contenido Requerido
+Barra de Navegacion
+- Nombre o logo de la agencia a la izquierda.
+- Links de navegacion: Inicio, Destinos, Paquetes, Nosotros y Reservar.
+- El link "Reservar" debe apuntar a reserva.html (pagina que se creara en la Etapa 2).
+Seccion Hero (encabezado principal)
+- Imagen de fondo relacionada con viajes o turismo.
+- Titulo principal con el nombre de la agencia (etiqueta h1).
+- Slogan o frase que motive al visitante.
+- Buscador visual con campos de destino, fecha de salida y cantidad de pasajeros, mas un 
+boton "Buscar". En esta etapa el buscador es solo visual y no necesita funcionar; el boton 
+puede redirigir a reserva.html.
+Seccion de Destinos Destacados
+Mostrar un minimo de cuatro destinos en formato de tarjetas. Cada tarjeta debe incluir:
+a) Imagen del destino.
+b) Nombre del destino (ciudad o pais).
+c) Descripcion breve de dos a tres oraciones.
+d) Precio referencial (por ejemplo: "Desde USD 890").
+e) Boton "Ver paquetes" (puede ser decorativo en esta etapa).
+Las tarjetas deben organizarse en una grilla de al menos dos columnas en pantallas de escritorio, 
+usando CSS Grid o Flexbox.
+Seccion de Tipos de Paquetes / Servicios
+Mostrar un minimo de cuatro tipos de servicios que ofrece la agencia. Ejemplos sugeridos:
+- Paquetes Todo Incluido
+- Cruceros
+- Viajes de Egresados
+- Turismo de Aventura
+Cada servicio debe mostrar un icono o imagen, un titulo y una descripcion breve.
+Seccion de Testimonios
+- Minimo tres testimonios de clientes.
+Evaluacion Sumativa 2 | Desarrollo Web HTML & JS Agencia de Turismo ViajarYa
+Programacion Web | Pagina 5
+- Cada testimonio debe incluir nombre del cliente, texto del comentario y calificacion (puede 
+representarse con caracteres o texto).
+Seccion Por que Elegirnos
+- Minimo tres argumentos destacados: experiencia, atencion personalizada, mejores precios, 
+u otros.
+Footer
+- Nombre de la agencia y slogan.
+- Links de navegacion rapida.
+- Datos de contacto ficticios: email, telefono y WhatsApp.
+- Links a redes sociales (pueden ser placeholders).
+- Ano de copyright.
+ Requisitos de Estilo
+- Paleta de colores coherente con la tematica de turismo. Definir al menos tres colores como 
+variables CSS (--color-principal, --color-secundario, --color-acento).
+- Minimo dos tipografias: una para titulos y otra para el cuerpo del texto. Pueden usarse 
+tipografias de Google Fonts.
+- Las tarjetas de destinos y servicios deben tener efecto visual al pasar el cursor (hover) con 
+transicion suave.
+- El hero debe incluir una superposicion semitransparente sobre la imagen para garantizar la 
+legibilidad del texto.
+- El sitio debe adaptarse a pantallas moviles: en dispositivos chicos los elementos deben 
+apilarse en una sola columna.
+
+
+
+RESPUESTA RECIBIDA:
+
+Barra de navegación con logo y enlace a reserva.html
+Sección hero con imagen de fondo y buscador visual
+Cuatro destinos destacados en tarjetas responsive
+Cuatro servicios / paquetes con iconos
+Tres testimonios de clientes
+Sección “Por qué elegirnos”
+Footer con datos de contacto y redes sociales
+Estilo responsive, paleta de colores con variables CSS y tipografías de Google Fonts
+
+USO EN EL PROYECTO:
+
+si modifique algunos codigos, telefonos fue muy pocas cosas ya que lo que le pedi cumplio no fue necesario muchos cambios
+
+REFLEXION PERSONAL:
+
+si cumplio con lo que le pédi 
