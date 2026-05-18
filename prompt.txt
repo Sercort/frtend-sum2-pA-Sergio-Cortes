@@ -91,7 +91,7 @@ si cumplio con lo que le pédi
 
 
  CONSULTA 
-#[2] Etapa del proyecto: [Etapa 1 ] Fecha: 
+#[2] Etapa del proyecto: [Etapa 2 ] Fecha: 
 [18/05/20226] ------------------------------------------------------------
 
 parte 1 
@@ -189,3 +189,70 @@ Los campos requeridos ahora muestran asterisco en su etiqueta]
 prompt? Obtuviste lo que esperabas? Que cambiarias la proxima vez?
 
 si fue util ya que esta generando los codigos como esta en el prompt ] 
+
+
+============================================================ CONSULTA 
+#[1] Etapa del proyecto: [ Etapa 3] Fecha: 
+[18/05/20226] ------------------------------------------------------------
+PROMPT ENVIADO A COPILOT: [crea un formulario de validación con JavaScrip(js) 
+
+el objetivo es :
+Agregar el archivo validaciones.js que intercepte el envio del formulario, aplique todas las reglas de 
+validacion del lado del cliente y proporcione retroalimentacion visual inmediata. Si el formulario 
+pasa todas las validaciones, debe mostrarse una pantalla de confirmacion de reserva.
+
+Reglas de Validacion Requeridas
+Seccion A — Datos del Viaje
+Campo Regla
+Destino Debe seleccionarse una opcion valida (no el placeholder).
+Tipo de paquete Al menos una opcion de radio button debe estar seleccionada.
+Fecha de salida No puede ser en el pasado. Debe ser al menos 7 dias a partir de la 
+fecha actual.
+Fecha de regreso Debe ser estrictamente posterior a la fecha de salida.
+Duracion Seleccion obligatoria.
+Ciudad de salida ("Otro") Si se selecciono "Otro" en el puerto de salida, el campo de texto no 
+puede estar vacio.
+Seccion B — Datos de los Pasajeros
+Campo Regla
+Cantidad de adultos Minimo 1, maximo 10. Solo numeros enteros.
+
+Cantidad de menores Minimo 0, maximo 8. No puede superar el doble de la cantidad de 
+adultos.
+Nombre completo Solo letras y espacios. Minimo 5 caracteres, maximo 80.
+Pasaporte o DNI Alfanumerico, entre 7 y 12 caracteres.
+Fecha de nacimiento El pasajero principal debe ser mayor de 18 anos al momento del 
+envio.
+Correo electronico Formato valido con @ y dominio. Usar expresion regular.
+Telefono Solo digitos, guiones, espacios y el signo mas (+). Minimo 8 digitos 
+numericos.
+Necesidades especiales Si el checkbox esta marcado, el textarea no puede estar vacio
+
+Seccion C — Preferencias
+Campo Regla
+Tipo de habitacion Debe seleccionarse una opcion.
+Regimen de comidas Seleccion obligatoria.
+Presupuesto estimado Seleccion obligatoria
+
+Seccion D — Confirmacion
+- El textarea de comentarios no debe superar los 300 caracteres. Validar tambien al 
+momento del envio, ademas del contador en tiempo real.
+- Ambos checkboxes de terminos y condiciones y politica de privacidad son obligatorios. Si 
+alguno falta, mostrar un mensaje de error especifico para cada uno] ------------------------------------------------------------
+RESPUESTA RECIBIDA (resumen breve): [validaciones.js intercepta el envío del formulario y valida:
+selección de destino y datos de viaje
+fechas de salida y regreso
+cantidad de adultos y menores
+nombre, documento, nacimiento, email y teléfono
+necesidades especiales si están marcadas
+tipo de habitación, régimen, presupuesto y origen
+comentarios <= 300 caracteres
+aceptación individual de términos y privacidad] ----------------------------------------------------------
+-- USO EN EL PROYECTO: [Explicar con tus propias palabras si usaste la 
+respuesta tal cual, si la modificaste o si la descartaste. Indicar por que 
+tomaste esa decision.] ------------------------------------------------------
+------ REFLEXION PERSONAL: [Escribir con tus propias palabras: fue util el 
+prompt? Obtuviste lo que esperabas? Que cambiarias la proxima vez?
+
+no hice ningun cambio 
+] 
+============================================================

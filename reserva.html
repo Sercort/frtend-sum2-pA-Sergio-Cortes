@@ -45,8 +45,9 @@
             <legend>Sección A — Datos del viaje</legend>
             <div class="form-grid">
               <div class="form-group">
-                <label for="destino">Destino de interés</label>
+                <label for="destino">Destino de interés <span class="required">*</span></label>
                 <select id="destino" name="destino" required>
+                  <option value="" disabled selected>Seleccione un destino</option>
                   <optgroup label="América del Sur">
                     <option value="rio-de-janeiro">Río de Janeiro</option>
                     <option value="cusco">Cusco</option>
@@ -95,8 +96,9 @@
               </div>
 
               <div class="form-group">
-                <label for="duracion">Duración aproximada</label>
-                <select id="duracion" name="duracion">
+                <label for="duracion">Duración aproximada <span class="required">*</span></label>
+                <select id="duracion" name="duracion" required>
+                  <option value="" disabled selected>Seleccione duración</option>
                   <option value="3-5">3 a 5 días</option>
                   <option value="1-semana">1 semana</option>
                   <option value="2-semanas">2 semanas</option>
@@ -163,8 +165,9 @@
               </div>
 
               <div class="form-group">
-                <label for="nacionalidad">Nacionalidad</label>
+                <label for="nacionalidad">Nacionalidad <span class="required">*</span></label>
                 <select id="nacionalidad" name="nacionalidad" required>
+                  <option value="" disabled selected>Seleccione nacionalidad</option>
                   <option value="argentina">Argentina</option>
                   <option value="chilena">Chilena</option>
                   <option value="brasilena">Brasilera</option>
@@ -211,8 +214,9 @@
               </div>
 
               <div class="form-group">
-                <label for="regimen">Régimen de comidas</label>
-                <select id="regimen" name="regimen">
+                <label for="regimen">Régimen de comidas <span class="required">*</span></label>
+                <select id="regimen" name="regimen" required>
+                  <option value="" disabled selected>Seleccione régimen</option>
                   <option value="alojamiento">Solo alojamiento</option>
                   <option value="desayuno">Desayuno incluido</option>
                   <option value="media-pension">Media pensión</option>
@@ -233,8 +237,9 @@
               </div>
 
               <div class="form-group">
-                <label for="presupuesto">Presupuesto estimado por persona</label>
-                <select id="presupuesto" name="presupuesto">
+                <label for="presupuesto">Presupuesto estimado por persona <span class="required">*</span></label>
+                <select id="presupuesto" name="presupuesto" required>
+                  <option value="" disabled selected>Seleccione presupuesto</option>
                   <option value="menos-500">Menos de USD 500</option>
                   <option value="500-1000">USD 500 a 1000</option>
                   <option value="1000-2500">USD 1000 a 2500</option>
@@ -244,8 +249,9 @@
               </div>
 
               <div class="form-group">
-                <label for="origen">Cómo se enteró de ViajarYa</label>
-                <select id="origen" name="origen">
+                <label for="origen">Cómo se enteró de ViajarYa <span class="required">*</span></label>
+                <select id="origen" name="origen" required>
+                  <option value="" disabled selected>Seleccione fuente</option>
                   <option value="redes">Redes sociales</option>
                   <option value="recomendacion">Recomendación</option>
                   <option value="busqueda">Búsqueda web</option>
@@ -319,34 +325,7 @@
     <div class="copyright">© 2026 ViajarYa. Todos los derechos reservados.</div>
   </footer>
 
-  <script>
-    const puertoSelect = document.getElementById('puerto');
-    const puertoOtroGroup = document.getElementById('puerto-otro-group');
-    const mayoresCheckbox = document.getElementById('mayores-checkbox');
-    const mayoresCantidadGroup = document.getElementById('mayores-cantidad-group');
-    const especialesCheckbox = document.getElementById('especiales-checkbox');
-    const especialesGroup = document.getElementById('especiales-group');
-    const comentarios = document.getElementById('comentarios');
-    const counter = document.getElementById('counter');
+  <script src="validaciones.js"></script>
 
-    function updateVisibility() {
-      puertoOtroGroup.classList.toggle('hidden', puertoSelect.value !== 'otro');
-      mayoresCantidadGroup.classList.toggle('hidden', !mayoresCheckbox.checked);
-      especialesGroup.classList.toggle('hidden', !especialesCheckbox.checked);
-    }
-
-    function updateCounter() {
-      const remaining = 300 - comentarios.value.length;
-      counter.textContent = remaining;
-    }
-
-    puertoSelect.addEventListener('change', updateVisibility);
-    mayoresCheckbox.addEventListener('change', updateVisibility);
-    especialesCheckbox.addEventListener('change', updateVisibility);
-    comentarios.addEventListener('input', updateCounter);
-
-    updateVisibility();
-    updateCounter();
-  </script>
 </body>
 </html>

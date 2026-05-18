@@ -421,6 +421,46 @@ a {
   box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.15);
 }
 
+.error-text {
+  margin-top: 0.55rem;
+  color: #b91c1c;
+  font-size: 0.95rem;
+}
+
+.confirmacion {
+  background: rgba(15, 23, 42, 0.85);
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  z-index: 50;
+}
+
+.confirmacion-card {
+  background: var(--color-blanco);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.confirmacion-card h2 {
+  margin-top: 0;
+  color: var(--color-principal);
+}
+
+.confirmacion-card p {
+  color: #475569;
+  margin: 1rem 0 1.5rem;
+}
+
+.confirmacion-card .btn {
+  min-width: 220px;
+}
+
 .radio-group,
 .checkbox-group {
   display: grid;
