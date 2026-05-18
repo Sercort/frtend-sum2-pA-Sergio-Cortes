@@ -427,6 +427,28 @@ a {
   font-size: 0.95rem;
 }
 
+.form-summary {
+  background: rgba(244, 173, 54, 0.12);
+  border: 1px solid rgba(244, 173, 54, 0.35);
+  border-radius: 1rem;
+  color: #92400e;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.counter-warning {
+  color: #ea580c;
+}
+
+.counter-max {
+  color: #b91c1c;
+}
+
+.hidden {
+  display: none;
+}
+
 .confirmacion {
   background: rgba(15, 23, 42, 0.85);
   position: fixed;

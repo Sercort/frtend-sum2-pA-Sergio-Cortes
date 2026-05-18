@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const puertoOtro = document.getElementById('puerto-otro');
   const mayoresCheckbox = document.getElementById('mayores-checkbox');
   const mayoresCantidad = document.getElementById('mayores-cantidad');
+  const adultos = document.getElementById('adultos');
+  const menores = document.getElementById('menores');
   const nombre = document.getElementById('nombre');
   const documento = document.getElementById('documento');
   const nacimiento = document.getElementById('nacimiento');
@@ -228,18 +230,50 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateCounter() {
-    const remaining = 300 - comentarios.value.length;
-    counter.textContent = remaining;
+    const length = comentarios.value.length;
+    counter.textContent = `${length} / 300 caracteres`;
+    counter.classList.remove('counter-warning', 'counter-max');
+    if (length >= 300) {
+      counter.classList.add('counter-max');
+    } else if (length >= 240) {
+      counter.classList.add('counter-warning');
+    }
+  }
+
+  function clearSummary() {
+    if (!errorSummary) return;
+    errorSummary.textContent = '';
+    errorSummary.classList.add('hidden');
+  }
+
+  function showSummary(count) {
+    if (!errorSummary) return;
+    errorSummary.textContent = `Se encontraron ${count} campos con errores. Por favor corríjalos antes de continuar.`;
+    errorSummary.classList.remove('hidden');
+  }
+
+  function getSelectedValue(radios) {
+    const selected = radios.find(radio => radio.checked);
+    return selected ? selected.value : '';
   }
 
   function showConfirmation() {
     clearValidationStates();
+    clearSummary();
+    const selectedPaquete = getSelectedValue(paqueteRadios).replace(/-/g, ' ');
+    const selectedHabitacion = getSelectedValue(habitacionRadios).replace(/-/g, ' ');
+    const pasajeros = Number(adultos.value) + Number(menores.value);
+    const solicitudId = Math.floor(Math.random() * 900000) + 100000;
     const confirmation = document.createElement('div');
     confirmation.className = 'confirmacion';
     confirmation.innerHTML = `
       <section class="confirmacion-card">
-        <h2>¡Reserva enviada!</h2>
-        <p>Tu solicitud ha sido recibida. Nuestro equipo de ViajarYa revisará los datos y te contactará a la brevedad.</p>
+        <h2>¡Reserva confirmada, ${nombre.value.trim()}!</h2>
+        <p>Hemos registrado tu solicitud para viajar a <strong>${destino.options[destino.selectedIndex].text}</strong>.</p>
+        <p><strong>Fechas:</strong> ${fechaSalida.value} → ${fechaRegreso.value}</p>
+        <p><strong>Pasajeros:</strong> ${pasajeros} (adultos: ${adultos.value}, menores: ${menores.value})</p>
+        <p><strong>Paquete:</strong> ${selectedPaquete}</p>
+        <p><strong>Solicitud Nº:</strong> ${solicitudId}</p>
         <button id="volver-form" class="btn">Volver al formulario</button>
       </section>
     `;
@@ -252,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
       form.classList.remove('hidden');
       form.reset();
       clearValidationStates();
+      clearSummary();
       updateVisibility();
       updateCounter();
     });
@@ -286,11 +321,13 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const allValid = validations.every(Boolean);
+    const errorCount = form.querySelectorAll('.campo-error').length;
     if (allValid) {
       showConfirmation();
       return;
     }
 
+    showSummary(errorCount);
     const firstError = form.querySelector('.campo-error');
     if (firstError) {
       firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -345,6 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('reset', () => {
     setTimeout(() => {
       clearValidationStates();
+      clearSummary();
       updateVisibility();
       updateCounter();
     }, 0);

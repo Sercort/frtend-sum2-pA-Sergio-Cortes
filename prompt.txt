@@ -256,3 +256,60 @@ prompt? Obtuviste lo que esperabas? Que cambiarias la proxima vez?
 no hice ningun cambio 
 ] 
 ============================================================
+
+
+============================================================ CONSULTA 
+#[2] Etapa del proyecto: [Etapa 3] Fecha: 
+[18/05/2026] ------------------------------------------------------------
+PROMPT ENVIADO A COPILOT: [ Comportamiento de la Interfaz
+Retroalimentacion Visual por Campo
+- Al detectar un error: agregar la clase "campo-error" al campo correspondiente (borde rojo).
+- Mostrar un mensaje de error descriptivo debajo del campo. Este mensaje debe generarse 
+con JavaScript, no estar escrito directamente en el HTML.
+- Al corregir el error (eventos input o change): remover la clase "campo-error" y agregar la 
+clase "campo-ok" (borde verde).
+- Los mensajes de error deben desaparecer cuando el usuario corrige el campo.
+Funcionalidades en Tiempo Real
+- Contador de caracteres del textarea: actualizar en tiempo real con el formato "X / 300 
+caracteres". Cambiar el color del contador a naranja cuando se supere el 80% del limite, y a 
+rojo cuando se alcance el limite maximo.
+- Al modificar la fecha de salida, verificar automaticamente si la fecha de regreso sigue 
+siendo valida y mostrar error si corresponde.
+
+El campo de ciudad de salida debe mostrarse u ocultarse segun la opcion elegida en el 
+select de puerto de salida.
+Comportamiento al Enviar el Formulario
+- Usar preventDefault() para impedir el envio si hay errores.
+- Recorrer todos los campos y aplicar las validaciones en orden.
+- Al detectar errores, hacer scroll automatico al primer campo con error usando 
+scrollIntoView().
+- Mostrar un mensaje de resumen al inicio del formulario indicando cuantos campos tienen 
+errores (por ejemplo: "Se encontraron 3 campos con errores. Por favor corregalos antes de 
+continuar.").
+Pantalla de Confirmacion
+Si el formulario pasa todas las validaciones:
+- Ocultar el formulario.
+- Mostrar una seccion de confirmacion con: mensaje personalizado que incluya el nombre del 
+pasajero y el destino seleccionado, fechas del viaje, cantidad de pasajeros, tipo de paquete 
+y numero de solicitud generado aleatoriamente con Math.random().
+] ------------------------------------------------------------
+RESPUESTA RECIBIDA (resumen breve): [Añadido errorSummary para manejar el resumen de errores.
+Añadidos adultos y menores en las constantes usadas por la confirmación.
+Eliminado el bloque duplicado de showConfirmation() y dejado solo una implementación correcta.
+styles.css
+
+Agregadas clases:
+.form-summary
+.counter-warning
+.counter-max
+.hidden]
+ ----------------------------------------------------------
+-- USO EN EL PROYECTO: [lo deje tal cual ya que hizo los cambios correspondiente que se entrego en el prompt ] ------------------------------------------------------
+------ REFLEXION PERSONAL: [Escribir con tus propias palabras: fue util el 
+prompt? Obtuviste lo que esperabas? Que cambiarias la proxima vez?
+
+en el proyecto se hicieron pocos cambios ya que se le entrego prompt muy completos con toda la informacion adquirida,
+hubieron errores que copilot no supo resolver y por tiempo no pude buscarlo para dejarlo como pidieron 
+
+lo que cambiaria las casillas de selencion ya que estan mal alineada y por el tiempo no pude alinearlo ] 
+============================================================
