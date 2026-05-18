@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ViajarYa - Agencia de Turismo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">ViajarYa</a>
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="reserva.html" class="btn-link">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="hero-tag">Explora, vive y descubre con confianza</p>
+        <h1>ViajarYa</h1>
+        <p class="hero-text">Paquetes nacionales e internacionales, cruceros y aventuras hechas para ti. Inspírate hoy y planea el viaje de tus sueños.</p>
+        <div class="hero-search">
+          <input type="text" placeholder="Destino" aria-label="Destino">
+          <input type="date" aria-label="Fecha de salida">
+          <input type="number" min="1" placeholder="Pasajeros" aria-label="Pasajeros">
+          <a href="reserva.html" class="btn hero-btn">Buscar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="destinos">
+      <div class="container">
+        <div class="section-header">
+          <span>Destinos Destacados</span>
+          <h2>Escapadas inolvidables para cada viajero</h2>
+        </div>
+        <div class="cards-grid">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Playa tropical">
+            <div class="card-body">
+              <h3>Riviera Maya</h3>
+              <p>Disfruta playas cristalinas, actividades acuáticas y cultura maya cerca del Caribe mexicano.</p>
+              <p class="price">Desde USD 890</p>
+              <button class="btn-secondary">Ver paquetes</button>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Ciudad europea">
+            <div class="card-body">
+              <h3>París</h3>
+              <p>Explora historia, gastronomía y romance en la Ciudad de la Luz con un paquete hecho a medida.</p>
+              <p class="price">Desde USD 1,250</p>
+              <button class="btn-secondary">Ver paquetes</button>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80" alt="Turismo de aventura">
+            <div class="card-body">
+              <h3>Patagonia</h3>
+              <p>Aventura entre montañas, glaciares y naturaleza salvaje para quienes buscan experiencias únicas.</p>
+              <p class="price">Desde USD 1,490</p>
+              <button class="btn-secondary">Ver paquetes</button>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Crucero de lujo">
+            <div class="card-body">
+              <h3>Crucero Caribe</h3>
+              <p>Relájate en alta mar con rutas de ensueño, entretenimiento premium y experiencias gastronómicas.</p>
+              <p class="price">Desde USD 980</p>
+              <button class="btn-secondary">Ver paquetes</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section service-section" id="paquetes">
+      <div class="container">
+        <div class="section-header">
+          <span>Servicios</span>
+          <h2>Viajes diseñados para cada estilo</h2>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">🏝️</div>
+            <h3>Todo Incluido</h3>
+            <p>Relájate sin preocupaciones con alojamiento, comidas y actividades incluidas en el paquete.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🛳️</div>
+            <h3>Cruceros</h3>
+            <p>Viajes por mar con destinos variados, entretenimiento a bordo y servicios premium.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🎓</div>
+            <h3>Viajes de Egresados</h3>
+            <p>Experiencias pensadas para celebrar con seguridad, diversión y itinerarios memorables.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🌄</div>
+            <h3>Turismo Aventura</h3>
+            <p>Rutas de trekking, deportes extremos y experiencias en la naturaleza para los más audaces.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <span>Testimonios</span>
+          <h2>Lo que dicen nuestros viajeros</h2>
+        </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <p>"ViajarYa organizó todo con gran detalle. El viaje a París superó nuestras expectativas y el servicio fue impecable."</p>
+            <h4>Laura Méndez</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+          </article>
+          <article class="testimonial-card">
+            <p>"El crucero fue fantástico y la atención fue muy personalizada. Recomendado para quienes buscan tranquilidad y calidad."</p>
+            <h4>Carlos Rivera</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+          </article>
+          <article class="testimonial-card">
+            <p>"Nuestro viaje de egresados fue inolvidable. Los paquetes se adaptaron al grupo y todo resultó muy bien coordinado."</p>
+            <h4>Sofía Torres</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why-section" id="nosotros">
+      <div class="container">
+        <div class="section-header">
+          <span>¿Por qué elegirnos?</span>
+          <h2>Valores que hacen la diferencia</h2>
+        </div>
+        <div class="why-grid">
+          <article class="why-card">
+            <h3>Experiencia comprobada</h3>
+            <p>Décadas de trabajo en turismo nos permiten ofrecer itinerarios confiables y personalizados.</p>
+          </article>
+          <article class="why-card">
+            <h3>Atención personalizada</h3>
+            <p>Cada cliente recibe asesoría directa para encontrar el viaje ideal según su estilo y presupuesto.</p>
+          </article>
+          <article class="why-card">
+            <h3>Mejores precios</h3>
+            <p>Negociamos tarifas competitivas para que puedas disfrutar más sin gastar de más.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#" class="brand footer-brand">ViajarYa</a>
+        <p>Tu puente hacia las mejores experiencias de viaje.</p>
+      </div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <a href="#inicio">Inicio</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#paquetes">Paquetes</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>Email: contacto@viajarYa.com</p>
+        <p>Tel:  12345678</p>
+        <p>WhatsApp: +56 9 1234 5678</p>
+      </div>
+      <div>
+        <h4>Síguenos</h4>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2026 ViajarYa. Todos los derechos reservados.</div>
+  </footer>
+</body>
+</html>
